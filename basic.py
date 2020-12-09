@@ -78,14 +78,6 @@ async def whois_error(ctx, error):
 
 f = open("nitrocodes.txt", "r")
 
-@client.command()
-async def nitrocodes(ctx):
-    ncsending = True
-    while ncsending:
-        for code in f.readlines():
-            await ctx.send(code)
-            time.sleep(1)
-            f.close()
 
 
 client.run("NzcwMjcyODI0NDY4MDQ1ODY1.X5bKeA.LMfjjNVTpLJNqFIoZcasmChyJBo")
