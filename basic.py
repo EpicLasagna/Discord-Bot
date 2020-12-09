@@ -59,6 +59,7 @@ async def amazing(ctx):
     await ctx.send(embed=embed)
 
 @client.command()
+@commands.has_permissions(manage_messages=True)
 async def clear(ctx, amount : int):
     await ctx.channel.purge(limit=amount)
 
@@ -67,13 +68,14 @@ async def whois(ctx, member : discord.Member):
     created_at = member.created_at.strftime("%b %d %y")
     embed = discord.Embed(title=f"{member.name}", description="Below is their userinfo!", inline=False,color=0xff1f1f)
     embed.add_field(name="ID", value=f"{member.id}")
-    embed.add_field(name="Join date:", value= f"{created_at}")
+    embed.add_field(name="Account creation date:", value= f"{created_at}")
     await ctx.send(embed=embed)
 
 @whois.error
 async def whois_error(ctx, error):
     if isinstance(error, commands.MemberNotFound):
-        await ctx.send(f":x: This is not a member of this server!")
+        await ctx.send(f":x: That is not a member of this server!")
+
 f = open("nitrocodes.txt", "r")
 
 @client.command()
@@ -86,4 +88,4 @@ async def nitrocodes(ctx):
             f.close()
 
 
-client.run("Bruh u thought u could get my token lmaooo.")
+client.run("NzcwMjcyODI0NDY4MDQ1ODY1.X5bKeA.LMfjjNVTpLJNqFIoZcasmChyJBo")
