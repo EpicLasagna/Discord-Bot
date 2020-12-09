@@ -86,4 +86,4 @@ async def nitrocodes(ctx):
             f.close()
 
 
-client.run("NzcwMjcyODI0NDY4MDQ1ODY1.X5bKeA.LMfjjNVTpLJNqFIoZcasmChyJBo")
+client.run("Bruh u thought u could get my token lmaooo.")
